@@ -27,6 +27,10 @@ namespace CR_TemplateImporter.UI
                 TemplateLoader.SaveAndReloadTemplates();
                 System.Windows.Forms.MessageBox.Show("Templates Imported");
             }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
             finally
             {
                 Cursor.Current = saveCursor;
@@ -43,6 +47,10 @@ namespace CR_TemplateImporter.UI
                 TemplateLoader.ImportTemplatePackageViaUrl(txtPackageFileUrl.Text);
                 TemplateLoader.SaveAndReloadTemplates();
                 System.Windows.Forms.MessageBox.Show("Package Imported");
+            }
+            catch (Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
             }
             finally
             {
